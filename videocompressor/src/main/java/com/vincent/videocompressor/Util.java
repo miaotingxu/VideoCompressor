@@ -1,4 +1,4 @@
-package com.vincent.videocompress;
+package com.vincent.videocompressor;
 
 import android.annotation.SuppressLint;
 import android.content.ContentUris;

@@ -18,6 +18,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.vincent.videocompressor.Util;
 import com.vincent.videocompressor.VideoCompress;
 
 import java.io.File;
@@ -30,14 +31,11 @@ public class MainActivity extends AppCompatActivity {
     private static final String[] PERMISSION = new String[]{
             Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE
     };
-
     private static final int REQUEST_FOR_VIDEO_FILE = 1000;
     private TextView tv_input, tv_output, tv_indicator, tv_progress;
     private String outputDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath();
-
     private String inputPath;
     private String outputPath;
-
     private ProgressBar pb_compress;
 
     private long startTime, endTime;

@@ -2,11 +2,6 @@ package com.vincent.videocompressor;
 
 import android.os.AsyncTask;
 
-/**
- * Created by Vincent Woo
- * Date: 2017/8/16
- * Time: 15:15
- */
 public class VideoCompress {
     private static final String TAG = VideoCompress.class.getSimpleName();
 
@@ -23,7 +18,7 @@ public class VideoCompress {
     }
 
     public static VideoCompressTask compressVideoLow(String srcPath, String destPath, CompressListener listener) {
-        VideoCompressTask task =  new VideoCompressTask(listener, VideoController.COMPRESS_QUALITY_LOW);
+        VideoCompressTask task = new VideoCompressTask(listener, VideoController.COMPRESS_QUALITY_LOW);
         task.execute(srcPath, destPath);
         return task;
     }
@@ -78,8 +73,11 @@ public class VideoCompress {
 
     public interface CompressListener {
         void onStart();
+
         void onSuccess();
+
         void onFail();
+
         void onProgress(float percent);
     }
 }
